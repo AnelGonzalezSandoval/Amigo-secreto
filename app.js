@@ -58,3 +58,26 @@ function actualizarLista() {
         listaHTML.appendChild(li);
     }    
     }
+
+    //Ahora hay que crear una función para sortear a un amigo//
+    //Se debe validad que la lista no esté vacía//
+    //Se debe generar un índice aleatorio usando Math.random() y Math.floor()//
+    //Se debe obtener el nombre sorteado usando el índice aleatorio//
+    //Se debe mostrar el resultado, actualizar contenido de resultado//
+    //usando document.getElementById() e innerHTML para mostrar al amigo sorteado//
+    function sortearAmigo() {
+        //revisamos si hay amigos en la lista//
+        if (amigos.length === 0) {
+            //Si no hay amigos mandamos un alert para indicar que no hay amigos//
+            alert("No hay amigos para sortear. Agrega al menos un amigo por favor.");
+            //En caso de no haber amigos salidmos de la función//
+            return;
+        }
+        //Definimos una posiciónAleatoria dentro de la función//
+        let posicionAleatoria = Math.floor(Math.random()*amigos.length);
+        //Una vez que tenemos ya una posición aleatoria del índice de la lista, obtenemos el nombre del amigo secreto//
+        let amigoSecreto = amigos[posicionAleatoria];
+        //una vez que tenemos el valor de nuestro amigo secreto, lo vamos a mostrar en el HTML.//
+        let resultado = document.getElementById("resultado");
+        resultado.innerHTML = `<li>${amigoSecreto}</li>`;
+    }
