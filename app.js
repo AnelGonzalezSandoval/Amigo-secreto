@@ -17,5 +17,8 @@ function agregarAmigo() {
         amigos.push(nombreAmigo);
         //Revisión de si está bien hasta agregar a la lista, imprimimos la lista en la consola//
         console.log(amigos);
+        //Limpiando el campo//
+        document.getElementById("amigo").value = "";
+        
     }
 }
