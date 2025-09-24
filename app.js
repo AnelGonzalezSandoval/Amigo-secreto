@@ -19,6 +19,8 @@ function agregarAmigo() {
         console.log(amigos);
         //Limpiando el campo//
         document.getElementById("amigo").value = "";
-        
+        //Indicamos la acción si el campo no cumple con el if, es decir, si está vacío, ya que el if pregunta si tiene un valor//
+    } else {
+        alert("Por favor, inserte un nombre.")
     }
 }
